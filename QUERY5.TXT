@@ -5,7 +5,7 @@ SELECT  COUNT(*), username
 FROM users u
 JOIN posts p ON u.id = p.user_id
 JOIN likes l ON l.user_id = p.user_id
-GROUP BY u.username
+GROUP BY u.username      //aggiungo la tabella username per vedere anche i nomi di chi ha ricevuto i like
 ORDER BY count(*) DESC
 
 
